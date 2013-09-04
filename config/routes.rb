@@ -11,4 +11,6 @@ Frame::Application.routes.draw do
   resources :users do
     get 'invite', :on => :member
   end
+  
+  match "critter" => "home#critter"
 end
