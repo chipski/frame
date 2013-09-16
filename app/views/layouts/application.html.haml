@@ -22,7 +22,10 @@
           %footer
             .javascript
               .libs=javascript_include_tag "application"
-              .page  
-                =render :partial=> "layouts/tracker" 
+              .page
+                -if ["new", "index"].include?(controller.action_name)
+                  =render :partial=> "layouts/tracker_parent" 
+                -else  
+                  =render :partial=> "layouts/tracker" 
       / ! end of .container
     / ! end of #main
