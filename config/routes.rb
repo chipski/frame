@@ -1,6 +1,6 @@
 Frame::Application.routes.draw do
   authenticated :user do
-    root :to => 'home#index'
+    #get :private, :to => 'home#private'
   end
   devise_scope :user do
     root :to => "devise/registrations#new"
@@ -12,5 +12,11 @@ Frame::Application.routes.draw do
     get 'invite', :on => :member
   end
   
+  [:index, :next, :another, :form] 
+  
   match "critter" => "home#critter"
+  match "another" => "home#another"
+  match "next"    => "home#next"
+  match "index"   => "home#index"
+  root :to => 'home#index'
 end
