@@ -7,13 +7,16 @@ class HomeController < ApplicationController
   def index
   end
   
-  def next
-    #render :index
+  def start
   end
   
   def another
     #render :index
   end
+
+  def next
+  end
+  
 
   def private
     render :index
