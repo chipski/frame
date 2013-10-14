@@ -16,6 +16,9 @@ class HomeController < ApplicationController
 
   def next
   end
+
+  def more
+  end
   
 
   def private
@@ -24,5 +27,9 @@ class HomeController < ApplicationController
   
   def critter
     render :critter, :layout=>false
+  end
+  
+  def pardot
+    render :partial=>"home/frame2", :layout=>false
   end
 end

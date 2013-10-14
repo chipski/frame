@@ -12,12 +12,14 @@ Frame::Application.routes.draw do
     get 'invite', :on => :member
   end
   
-  [:index, :start, :next, :another, :form] 
+  [:index, :start, :next, :another, :form, :pardot] 
   
   match "critter" => "home#critter"
+  match "pardot"  => "home#pardot"
   match "another" => "home#another"
   match "next"    => "home#next"
-  match "start"    => "home#start"
+  match "more"    => "home#more"
+  match "start"   => "home#start"
   match "index"   => "home#index"
   root :to => 'home#start'
 end
