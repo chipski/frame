@@ -23,7 +23,7 @@
             .javascript
               .libs=javascript_include_tag "application"
               .page
-                -if ["new", "index"].include?(controller.action_name)
+                -if ["new", "index","more"].include?(controller.action_name)
                   =render :partial=> "layouts/tracker_parent" 
                 -else  
                   =render :partial=> "layouts/tracker" 
