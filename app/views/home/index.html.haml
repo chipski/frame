@@ -1,11 +1,15 @@
-%h1 Some Landing
-%h3 Click around then press button
-=link_to "Home", "/start", :class=>"btn btn-info"
-=link_to "Another", "/another", :class=>"btn btn-info"
-=link_to "Next", "/next", :class=>"btn btn-info"
+%h1
+  -if request.subdomain.present?
+    ="Subdomain! "
+    =request.subdomain.capitalize
+  =request.domain.capitalize
+  =controller.action_name.capitalize
+%br
+%br
 =render "buttons"
 
 %hr
 #call-to-action{:style => "text-align: center; margin-top: 80px"}
   %a.btn.btn-primary.btn-large{:href => "/critter"} Flat Request Whitepaper
-  %a.btn.btn-primary.btn-large{:href => "/users/sign_up"} Frame Request Whitepaper
+  %a.btn.btn-primary.btn-large{:href => "/users/sign_up"} Frame Critterism
+  %a.btn.btn-primary.btn-large{:href => "/more"} Frame Pardot

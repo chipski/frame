@@ -8,13 +8,19 @@ class HomeController < ApplicationController
   end
   
   def start
+    render :index
   end
   
   def another
-    #render :index
+    render :index
+  end
+
+  def paper
+    render :index
   end
 
   def next
+    render :index
   end
 
   def more

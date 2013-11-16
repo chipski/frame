@@ -3,7 +3,7 @@ Frame::Application.routes.draw do
     #get :private, :to => 'home#private'
   end
   devise_scope :user do
-    root :to => "devise/registrations#new"
+    #root :to => "devise/registrations#new"
     match '/user/confirmation' => 'confirmations#update', :via => :put, :as => :update_user_confirmation
   end
   devise_for :users, :controllers => { :registrations => "registrations", :confirmations => "confirmations" }
@@ -20,6 +20,7 @@ Frame::Application.routes.draw do
   match "next"    => "home#next"
   match "more"    => "home#more"
   match "start"   => "home#start"
+  match "paper"   => "home#paper"
   match "index"   => "home#index"
   root :to => 'home#start'
 end

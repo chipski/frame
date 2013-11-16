@@ -1,14 +1,17 @@
-%h1 The Next Landing
-%h3 Click around then press button
-=link_to "Home", "/start", :class=>"btn btn-info"
-=link_to "Another", "/another", :class=>"btn btn-info"
-=link_to "Next", "/next", :class=>"btn btn-info"
-=link_to "More", "/more", :class=>"btn btn-info"
+%h1
+  -if request.subdomain.present?
+    ="Subdomain! "
+    =request.subdomain.capitalize
+  =request.domain.capitalize
+  =controller.action_name.capitalize
+%br
+%br
 =render "buttons"
 
+%br
 %iframe{:src=>"http://rampframe.herokuapp.com/pardot", :id=>"lead", :width=>"100%", :height=>"600px"}
-%hr
+
 %hr
 #call-to-action{:style => "text-align: center; margin-top: 80px"}
-  %a.btn.btn-primary.btn-large{:href => "/critter"} Do The Flat Shake
-  %a.btn.btn-primary.btn-large{:href => "/users/sign_up"} Do The Frame Shake
+  %a.btn.btn-primary.btn-large{:href => "/critter"} Flat Request Whitepaper
+  %a.btn.btn-primary.btn-large{:href => "/users/sign_up"} Frame Request Whitepaper

@@ -1,6 +1,15 @@
-=link_to "Home with vars", "/start?utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm", :class=>"btn"
--url = "/start?utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm&rampmetrics_utm_campaign=oct10&rampmetrics_utm_source=techcrunch&rampmetrics_utm_content=show_and_tell&rampmetrics_utm_medium=email&rampmetrics_utm_term=paper"
-=link_to "Another with vars ", url, :class=>"btn"
+%h3 Click around these navigation buttons then press big blue buttons to get to form
+=link_to "Home", "/", :class=>"btn btn-info"
+=link_to "Start", "/start", :class=>"btn btn-info"
+=link_to "Another", "/another", :class=>"btn btn-info"
+=link_to "Next", "/next", :class=>"btn btn-info"
+=link_to "Paper", "/paper", :class=>"btn btn-info"
 
--url = "/more?utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm&rampmetrics_utm_campaign=oct10&rampmetrics_utm_source=techcrunch&rampmetrics_utm_content=show_and_tell&rampmetrics_utm_medium=email&rampmetrics_utm_term=paper"
-=link_to "More with vars ", url, :class=>"btn"
+%br
+%hr
+-qparm1="utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm"
+-qparm2="utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm&rampmetrics_utm_campaign=nov16&rampmetrics_utm_source=techcrunch&rampmetrics_utm_content=show_and_tell&rampmetrics_utm_medium=email&rampmetrics_utm_term=paper"
+
+=link_to "Top with vars", "/start?"+qparm1, :class=>"btn"
+=link_to "Top with vars2", "/start?"+qparm2, :class=>"btn"
+=link_to "More with vars2 ", "/more?"+qparm2, :class=>"btn"
