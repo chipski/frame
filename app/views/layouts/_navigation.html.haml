@@ -1,9 +1,9 @@
 = link_to "Home", "/start", :class => 'brand'
 %ul.nav
-  %li= link_to 'Padput.com', "www.padput.com/start"
-  %li= link_to 'ramp.padput.com', "ramp.padput.com/start"
-  %li= link_to 'Padpush.com', "www.padpush.com/start"
-  %li= link_to 'Herokuapp.com', "rampframe.herokuapp.com/start"
+  %li= link_to 'Padput.com', "//www.padput.com/start"
+  %li= link_to 'ramp.padput.com', "http://ramp.padput.com/start"
+  %li= link_to 'Padpush.com', "//www.padpush.com/start"
+  %li= link_to 'Herokuapp.com', "//rampframe.herokuapp.com/start"
   - if user_signed_in?
     %li
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'

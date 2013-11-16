@@ -1,6 +1,5 @@
 %h1
   -if request.subdomain.present?
-    ="Subdomain! "
     =request.subdomain.capitalize
   =request.domain.capitalize
   =controller.action_name.capitalize
