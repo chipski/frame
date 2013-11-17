@@ -25,7 +25,10 @@ class HomeController < ApplicationController
 
   def more
   end
-  
+
+  def pardot_flat
+    render :partial=>"home/frame2"
+  end  
 
   def private
     render :index
