@@ -2,9 +2,12 @@ class HomeController < ApplicationController
   
   #before_filter :authenticate_user!, :except => [:error, :landing] 
   #before_filter :authenticate_user!, :only=> [:private] 
+  before_filter :new_key
+  
   skip_before_filter :authenticate_user!, :except => [:private] 
   
   def index
+    
   end
   
   def start
@@ -41,4 +44,9 @@ class HomeController < ApplicationController
   def pardot
     render :partial=>"home/frame2", :layout=>false
   end
+  
+  def new_key
+    @new_key = Date.today.strftime("%m-%d-")+SecureRandom.urlsafe_base64(3)
+  end
+  
 end

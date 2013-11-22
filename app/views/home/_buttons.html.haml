@@ -7,8 +7,8 @@
 
 %br
 %hr
--qparm1="utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm"
--qparm2="utm_medium=testmedium&utm_source=testsource&utm_campaign=testcampaign&utm_content=testcontent&utm_term=testterm&rampmetrics_utm_campaign=nov16&rampmetrics_utm_source=techcrunch&rampmetrics_utm_content=show_and_tell&rampmetrics_utm_medium=email&rampmetrics_utm_term=paper"
+-qparm1="utm_medium=medium#{@new_key}&utm_source=source#{@new_key}&utm_campaign=camp#{@new_key}&utm_content=content#{@new_key}&utm_term=term#{@new_key}"
+-qparm2="utm_medium=medium#{@new_key}&utm_source=source#{@new_key}&utm_campaign=camp#{@new_key}&utm_content=content#{@new_key}&utm_term=term#{@new_key}&rampmetrics_utm_campaign=rcamp#{@new_key}&rampmetrics_utm_source=rsource#{@new_key}&rampmetrics_utm_content=rcontent#{@new_key}&rampmetrics_utm_medium=rmedium#{@new_key}&rampmetrics_utm_term=rterm#{@new_key}"
 
 =link_to "Top with vars", "/start?"+qparm1, :class=>"btn"
 =link_to "Top with vars2", "/start?"+qparm2, :class=>"btn"
