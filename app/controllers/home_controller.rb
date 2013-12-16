@@ -33,6 +33,10 @@ class HomeController < ApplicationController
     render :partial=>"home/frame2"
   end  
 
+  def pardot_iframe
+    render :partial=>"home/pardot_iframe"
+  end
+  
   def private
     render :index
   end
