@@ -1,20 +1,17 @@
 %h1
   -if request.subdomain.present?
-    ="Subdomain! "
     =request.subdomain.capitalize
   =request.domain.capitalize
   =controller.action_name.capitalize
 %br
 %br
-%h3 Click around these navigation buttons then press big blue buttons to get to form
+%h3 Click around buttons below then press big blue buttons to get to form
 =link_to "Home",    "/", :class=>"btn btn-info"
 =link_to "Start",   "/start", :class=>"btn btn-info"
 =link_to "Another", "/another", :class=>"btn btn-info"
 =link_to "Next",    "/next", :class=>"btn btn-info"
 =link_to "Paper",   "/paper", :class=>"btn btn-info"
 
-%br
-%hr
 -qparm1="utm_medium=medium#{@new_key}&utm_source=source#{@new_key}&utm_campaign=camp#{@new_key}&utm_content=content#{@new_key}&utm_term=term#{@new_key}"
 -qparm2="utm_medium=medium#{@new_key}&utm_source=source#{@new_key}&utm_campaign=camp#{@new_key}&utm_content=content#{@new_key}&utm_term=term#{@new_key}&rampmetrics_utm_campaign=rcamp#{@new_key}&rampmetrics_utm_source=rsource#{@new_key}&rampmetrics_utm_content=rcontent#{@new_key}&rampmetrics_utm_medium=rmedium#{@new_key}&rampmetrics_utm_term=rterm#{@new_key}"
 
