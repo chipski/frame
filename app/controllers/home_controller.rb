@@ -26,27 +26,37 @@ class HomeController < ApplicationController
     render :index
   end
 
+  def signup
+    render :index
+  end
+  
   def more
   end
 
+  def private
+    render :index
+  end
+  
+  def critter
+    #render :critter, :layout=>false
+    render :partial=>"home/critter"
+  end
+
+  def critter2
+    #render :critter, :layout=>false
+    render :partial=>"home/frame3"
+  end
+  
+  def pardot
+    render :partial=>"home/frame2", :layout=>false
+  end
+  
   def pardot_flat
     render :partial=>"home/frame2"
   end  
 
   def pardot_iframe
     render :partial=>"home/pardot_iframe"
-  end
-  
-  def private
-    render :index
-  end
-  
-  def critter
-    render :critter, :layout=>false
-  end
-  
-  def pardot
-    render :partial=>"home/frame2", :layout=>false
   end
   
   def new_key

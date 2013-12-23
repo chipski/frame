@@ -15,13 +15,15 @@ Frame::Application.routes.draw do
   [:index, :start, :next, :another, :form, :pardot] 
   
   match "critter"     => "home#critter"
+  match "critter2"     => "home#critter2"
   match "pardot"      => "home#pardot"
+  match "pardot_flat" => "home#pardot_flat"  
   match "another"     => "home#another"
   match "next"        => "home#next"
   match "more"        => "home#more"
-  match "pardot_flat" => "home#pardot_flat"  
   match "start"       => "home#start"
   match "paper"       => "home#paper"
   match "index"       => "home#index"
+  match "signup"      => "home#signup"
   root :to => 'home#start'
 end
