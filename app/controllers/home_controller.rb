@@ -40,7 +40,7 @@ class HomeController < ApplicationController
     render :partial=>"home/frame3" #, :layout=>false
   end
   def critter_iframe
-    render :partial=>"home/critter_iframe"
+    #render :partial=>"home/critter_iframe"
   end
 
   
