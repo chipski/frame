@@ -1,7 +1,7 @@
 %h1
   -if request.subdomain.present?
     =request.subdomain.capitalize
-  =request.domain.capitalize
+  =request.domain.capitalize if request.subdomain.present?
   =controller.action_name.capitalize
 %br
 %br

@@ -17,6 +17,8 @@ Frame::Application.routes.draw do
   match "critter"     => "home#critter"
   match "critter2"    => "home#critter2"
   match "critterframe"=> "home#critter_iframe"
+  match "axcient"    => "home#axcient"
+  match "axcientframe"=> "home#axcient_iframe"
   match "pardot"      => "home#pardot"
   match "pardot_flat" => "home#pardot_flat"  
   match "another"     => "home#another"
