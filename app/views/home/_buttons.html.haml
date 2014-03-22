@@ -4,8 +4,6 @@
   =request.domain.capitalize if request.subdomain.present?
   =controller.action_name.capitalize
 %br
-%br
-%h3 Click around buttons below then press big blue buttons to get to form
 =link_to "Home",    "/", :class=>"btn btn-info"
 =link_to "Start",   "/start", :class=>"btn btn-info"
 =link_to "Another", "/another", :class=>"btn btn-info"
@@ -18,3 +16,5 @@
 =link_to "Top with vars", "/start?"+qparm1, :class=>"btn"
 =link_to "Top with vars2", "/start?"+qparm2, :class=>"btn"
 =link_to "More with vars2 ", "/more?"+qparm2, :class=>"btn"
+
+%h3 Click around buttons above then press big blue buttons to get to form
